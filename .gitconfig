@@ -1,0 +1,7 @@
+[user]
+	name = Hem Brahmbhatt
+	email = hamant.brahmbhatt@gmail.com
+[core]
+	excludesfile = /Users/hem/.global_ignore
+[push]
+	default = simple
