@@ -10,3 +10,11 @@
 	ui = true
 [http]
   proxy = http://uk-southampton.privateinternetaccess.com
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
