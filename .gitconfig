@@ -3,5 +3,10 @@
 	email = hamant.brahmbhatt@gmail.com
 [core]
 	excludesfile = /Users/hem/.global_ignore
+	editor = /usr/bin/vim
 [push]
 	default = simple
+[color]
+	ui = true
+[http]
+  proxy = http://uk-southampton.privateinternetaccess.com
