@@ -8,8 +8,6 @@
 	default = simple
 [color]
 	ui = true
-[http]
-  proxy = http://uk-southampton.privateinternetaccess.com
 [diff]
 	tool = vimdiff
 [merge]
