@@ -14,6 +14,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'craigemery/vim-autotag'
 
 filetype plugin indent on
 syntax enable
@@ -29,6 +30,7 @@ set wrapmargin=0
 set t_Co=256
 colorscheme molokai 
 map <C-n> :NERDTreeToggle<CR>
+let g:ctrlp_show_hidden = 1
 
 " Function and key mapping for running cucumber test
 " ,t - Run scenario under cursor
