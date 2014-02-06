@@ -1,5 +1,5 @@
 set nocompatible
-filetype off   
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -25,10 +25,9 @@ set tabstop=2 shiftwidth=2 expandtab
 set number
 set nowrap
 set backspace=indent,eol,start
-set textwidth=0 
+set textwidth=0
 set wrapmargin=0
 set t_Co=256
-colorscheme molokai 
 map <C-n> :NERDTreeToggle<CR>
 let g:ctrlp_show_hidden = 1
 
