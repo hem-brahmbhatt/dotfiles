@@ -3,7 +3,7 @@
 	email = hamant.brahmbhatt@gmail.com
 [core]
 	excludesfile = /Users/hem/.global_ignore
-	editor = /usr/bin/vim
+	editor = /usr/local/bin/vim
 [push]
 	default = simple
 [color]
@@ -16,3 +16,4 @@
 	prompt = false
 [alias]
 	d = difftool
+  lg = log --format="%Cred%h%Creset%s%Cgreen(%cr)%C(blue)<%an>%Creset%C(yellow)%d%Creset" --graph
