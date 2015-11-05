@@ -5,10 +5,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 let g:vundle_default_git_proto = 'git'
 call vundle#begin()
 
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'craigemery/vim-autotag'
-Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree.git'
@@ -32,7 +32,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
 
 filetype plugin indent on
 syntax on
