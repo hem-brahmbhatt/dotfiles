@@ -175,3 +175,6 @@ nmap <leader>sw :StripTrailingWhitespaces<CR>
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+" Formatting JSON motherfukaaaa
+com! FormatJSON %!python -m json.tool
