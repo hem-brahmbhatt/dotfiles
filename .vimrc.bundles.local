@@ -1,0 +1,6 @@
+UnBundle 'pangloss/vim-javascript'
+UnBundle 'Shougo/neocomplete.vim.git'
+Bundle 'tomasr/molokai'
+Bundle 'mxw/vim-jsx'
+Bundle 'tpope/vim-obsession'
+Bundle 'tpope/vim-rhubarb.git'

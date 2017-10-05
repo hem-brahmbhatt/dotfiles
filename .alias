@@ -15,3 +15,6 @@ alias pull-all-projects='find ~/Projects -type d -name .git | xargs -n 1 dirname
 alias fetch-projects='find ~/Projects -type d -name .git | xargs -n 1 dirname | sort | while read line; do echo $line && cd $line && git fetch; done'
 alias mocha='mocha -R nyan'
 alias meat='~/Projects/skymeat/meat.sh'
+alias sea='~/Projects/skymeat/sea.sh'
+alias composer='php composer.phar'
+alias curl='curl -L'

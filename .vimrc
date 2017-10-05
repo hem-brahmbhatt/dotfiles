@@ -37,7 +37,6 @@ let g:jsx_ext_required = 1
 filetype plugin indent on
 syntax on
 colorscheme molokai
-let g:airline_theme='simple'
 " setting hidden allows undo to work after buffer was closed
 set hidden
 set noswapfile
@@ -71,6 +70,7 @@ nmap <Tab> :b#<CR>
 " Airline settings
 let g:airline_powerline_fonts = 1
 set laststatus=2
+let g:airline_theme='simple'
 
 " Function and key mapping for running cucumber test
 " ,t - Run scenario under cursor

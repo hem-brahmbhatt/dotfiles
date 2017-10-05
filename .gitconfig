@@ -1,6 +1,7 @@
 [user]
-	name = damnhipster
+	name = Hem Brahmbhatt
 	email = hamant.brahmbhatt@gmail.com
+	initials = hb
 [core]
 	excludesfile = /Users/hem/.global_ignore
 	editor = /usr/local/bin/vim
@@ -17,3 +18,4 @@
 [alias]
 	d = difftool
   lg = log --format="%Cred%h%Creset%s%Cgreen(%cr)%C(blue)<%an>%Creset%C(yellow)%d%Creset" --graph
+  churn = log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort -n | awk 'BEGIN {print "count\tfile"} {print $1 "\t" $2}'
