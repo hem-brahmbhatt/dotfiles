@@ -53,12 +53,18 @@ function yaml2json() {
   ruby -ryaml -rjson -e \
     '$/ = "END"; input = STDIN.gets; puts YAML.load(input).to_json if YAML.parse(input)'
 }
+
 #!/bin/bash
 #Info: https://community.akamai.com/community/web-performance/blog/2015/03/31/using-akamai-pragma-headers-to-investigate-or-troubleshoot-akamai-content-delivery
 function akamai() {
   curl -sILk -H 'Pragma: akamai-x-cache-on, akamai-x-cache-remote-on,akamai-x-check-cacheable, akamai-x-get-cache-key,akamai-x-get-extracted-values, akamai-x-get-nonces,akamai-x-get-ssl-client-session-id,akamai-x-get-true-cache-key, akamai-x-serial-no' $* 2>&1
 }
-function backup() { mv ~/$1 ~/Projects/dotfiles/; ln -s ~/Projects/dotfiles/$1; }function password() {
+
+function backup() { 
+  mv ~/$1 ~/Projects/dotfiles/; ln -s ~/Projects/dotfiles/$1;   
+}
+
+function password() {
   chars='@#$%&_+='
   { </dev/urandom LC_ALL=C grep -ao '[A-Za-z0-9]' \
           | head -n$((RANDOM % 8 + 9))
