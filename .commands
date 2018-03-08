@@ -86,3 +86,43 @@ function password() {
       | pbcopy \
       && echo `pbpaste`
 }
+
+function http() {
+  port=${1:-8000}
+  python -m SimpleHTTPServer $port
+}
+
+function set_aws_pro(){
+  if [ -z "$1" ]
+    then
+      PS3='Select aws profile to use: '
+      vars=(`cat ~/.aws/credentials | grep '\[*\]'| egrep -o '[^][]+'`)
+      echo "Execute \"set_aws_pro profile\" to switch account";
+      select opt in "${vars[@]}" ""Quit
+        do
+          if [ "$opt" = "Quit" ]; then
+            echo done
+            break
+          elif [[ "${vars[*]}" == *"$opt"* ]]; then
+            export AWS_DEFAULT_PROFILE=$opt;
+            aws configure list;
+            break
+          else
+           clear
+           echo bad option
+          fi
+      done
+    else
+      export AWS_DEFAULT_PROFILE=$1;
+      echo "Current profile is:";
+      aws configure list;
+  fi
+};
+
+function natvpn() {
+  DIR=/tmp
+
+  echo 'nat on en0 from any to any -> (en0)' > $DIR/share-vpn.rules
+  sudo pfctl -f $DIR/share-vpn.rules -e
+  echo "Use 'sudo pfctl -F all' to clear NAT rules"
+}
