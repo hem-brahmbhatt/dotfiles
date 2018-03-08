@@ -2,7 +2,7 @@ source /Users/hem/.alias
 source /Users/hem/.mac_colors
 source /Users/hem/.commands
 source /Users/hem/.auth
-source /Users/hem/Projects/NewsUK/TheSun/.profile
+#source /Users/hem/Projects/NewsUK/TheSun/.profile
 source /Users/hem/Projects/NewsUK/Times/.profile
 
 complete -C aws_completer aws
