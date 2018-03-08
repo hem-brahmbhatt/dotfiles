@@ -72,7 +72,7 @@ function akamai() {
 }
 
 function backup() { 
-  mv ~/$1 ~/Projects/dotfiles/; ln -s ~/Projects/dotfiles/$1;   
+  mv ~/$1 ~/Projects/dotfiles/ && ln -s ~/Projects/dotfiles/$1;   
 }
 
 function password() {
