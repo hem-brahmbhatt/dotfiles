@@ -19,3 +19,6 @@ source /Users/hem/.profile
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
 export ANDROID_HOME="/Users/hem/Library/Android/sdk"
+export ANDROID_NDK_HOME="/Users/hem/Library/Android/sdk/ndk-bundle"
+
+eval "$(rbenv init -)"
