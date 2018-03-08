@@ -3,26 +3,36 @@ function cert() {
 }
 
 function vpn() {
-  id="i-09a450ebadd8f42e3"
   vpn_name="streisand"
   command=$1
+  region=${2:-eu-west-2}
+  regions=`aws ec2 describe-regions --profile hemtech | jq '.Regions[].RegionName' --raw-output`
+
+  if ! echo $regions | grep $region > /dev/null; then
+    echo "Invalid region. Use one of the following."
+    echo $regions
+    return 1
+  fi
+
+  id=`aws ec2 describe-instances --filters Name=tag:Name,Values=$vpn_name --region $region --profile hemtech | jq --raw-output '.Reservations[].Instances[].InstanceId'`
 
   if [ $command = "start" ]; then
     aws ec2 ${command}-instances \
     --instance-ids $id \
     --profile hemtech \
-    --region eu-west-2 \
+    --region $region \
     > /dev/null
 
     aws ec2 wait instance-running \
     --instance-ids $id \
-    --profile hemtech
+    --profile hemtech \
+    --region $region
 
     # l2tp over IPSec
     # networksetup -connectpppoeservice $vpn_name
 
     # OpenVPN
-    osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"Direct\"" -e "end tell" > /dev/null
+    osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"$region\"" -e "end tell" > /dev/null
 
     echo "VPN started"
 
@@ -32,17 +42,18 @@ function vpn() {
     # scutil --nc stop $vpn_name
 
     # OpenVPN
-    osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "disconnect \"Direct\"" -e "end tell" > /dev/null
+    osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "disconnect \"$region\"" -e "end tell" > /dev/null
 
     aws ec2 ${command}-instances \
     --instance-ids $id \
     --profile hemtech \
-    --region eu-west-2 \
+    --region $region \
     > /dev/null
 
     aws ec2 wait instance-stopped \
     --instance-ids $id \
-    --profile hemtech
+    --profile hemtech \
+    --region $region
 
     echo "VPN stopped"
   fi
