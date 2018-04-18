@@ -251,6 +251,11 @@ set -g @resurrect-save-shell-history 'on'
 set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-strategy-vim 'session'
 
+# Speed things up
+set-option -s escape-time 10
+set -g focus-events on
+
+
 run-shell /Users/hem/.sensible.tmux
 
 # List of plugins
