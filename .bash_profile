@@ -16,7 +16,7 @@ source $(which assume-role)
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 source /Users/hem/.profile
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export PATH="/usr/local/opt/gnu-getopt/bin:/usr/local/bin:$PATH"
 
 export ANDROID_HOME="/Users/hem/Library/Android/sdk"
 export ANDROID_NDK_HOME="/Users/hem/Library/Android/sdk/ndk-bundle"
