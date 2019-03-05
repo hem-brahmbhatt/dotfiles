@@ -5,6 +5,7 @@
 [core]
 	excludesfile = /Users/hem/.global_ignore
 	editor = /usr/local/bin/vim
+	ignorecase = false
 [push]
 	default = simple
 [color]

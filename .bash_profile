@@ -2,8 +2,9 @@ source /Users/hem/.alias
 source /Users/hem/.mac_colors
 source /Users/hem/.commands
 source /Users/hem/.auth
-#source /Users/hem/Projects/NewsUK/TheSun/.profile
-source /Users/hem/Projects/NewsUK/Times/.profile
+# source /Users/hem/Projects/NewsUK/TheSun/.profile
+# source /Users/hem/Projects/NewsUK/Times/.profile
+source /Users/hem/Projects/elife/.profile
 
 complete -C aws_completer aws
 
@@ -22,3 +23,5 @@ export ANDROID_HOME="/Users/hem/Library/Android/sdk"
 export ANDROID_NDK_HOME="/Users/hem/Library/Android/sdk/ndk-bundle"
 
 eval "$(rbenv init -)"
+
+ssh-add ~/.ssh/gitlab > /dev/null 2>&1
