@@ -32,3 +32,16 @@ set nonumber
 " lazy drawing
 set lazyredraw
 set ttyfast
+" disable checking for preprocessers to make vue syntax highlighting quicker
+let g:vue_disable_pre_processors=1
+" disable pymode
+let g:pymode=0
+" disable tagbar
+let g:airline#extensions#tagbar#enabled = 0
+
+filetype on
+
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": ["vue", "javascript", "html", "ruby", "java", "jsx"],
+    \ "passive_filetypes": [] }
