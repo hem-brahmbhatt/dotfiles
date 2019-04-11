@@ -126,3 +126,7 @@ function natvpn() {
   sudo pfctl -f $DIR/share-vpn.rules -e
   echo "Use 'sudo pfctl -F all' to clear NAT rules"
 }
+
+function flushdns() {
+  sudo killall -HUP mDNSResponder
+}
