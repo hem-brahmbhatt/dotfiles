@@ -4,7 +4,8 @@ source /Users/hem/.commands
 source /Users/hem/.auth
 # source /Users/hem/Projects/NewsUK/TheSun/.profile
 # source /Users/hem/Projects/NewsUK/Times/.profile
-source /Users/hem/Projects/elife/.profile
+# source /Users/hem/Projects/elife/.profile
+source /Users/hem/Projects/Nexmo/.profile
 
 complete -C aws_completer aws
 
