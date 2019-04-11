@@ -1,6 +1,3 @@
-# added by travis gem
-[ -f /Users/hem/.travis/travis.sh ] && source /Users/hem/.travis/travis.sh
-
 # nvm
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh"  ] && . "$NVM_DIR/nvm.sh" # This loads nvm
