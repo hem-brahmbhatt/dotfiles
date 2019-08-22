@@ -1,3 +1,7 @@
+" Dependencies:
+"   - vim-spf13
+"   - See vimrc.bundles.local
+
 " vim: set sw=2 ts=4 sts=2 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker nospell:
 set shiftwidth=2                " Use indents of 4 spaces
 set expandtab                   " Tabs are spaces, not tabs
@@ -7,11 +11,6 @@ set softtabstop=2               " Let backspace delete indent
 set nospell
 
 colorscheme molokai
-
-" Airline settings
-let g:airline_powerline_fonts = 1
-set laststatus=2
-let g:airline_theme='simple'
 
 " JSX settings
 let g:jsx_ext_required = 0
@@ -43,5 +42,14 @@ filetype on
 
 let g:syntastic_mode_map = {
     \ "mode": "passive",
-    \ "active_filetypes": ["vue", "javascript", "html", "ruby", "java", "jsx"],
+    \ "active_filetypes": ["vue", "javascript", "html", "ruby", "java", "jsx", "typescript"],
     \ "passive_filetypes": [] }
+
+" Airline settings
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark'
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
