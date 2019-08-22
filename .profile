@@ -1,24 +1,25 @@
 source /Users/hem/.alias
 source /Users/hem/.commands
 source /Users/hem/.auth
+
+### Client specific dotfiles, so we're not polluting OS dotfiles.
+
 # source /Users/hem/Projects/NewsUK/TheSun/.profile
 # source /Users/hem/Projects/NewsUK/Times/.profile
 # source /Users/hem/Projects/elife/.profile
 # source /Users/hem/Projects/Nexmo/.profile
 source /Users/hem/Projects/NewsUK/Wireless/.profile
 
+# AWS
 complete -C aws_completer aws
-
-
 source $(which assume-role)
 
 export PATH="/usr/local/opt/gnu-getopt/bin:/usr/local/bin:$PATH"
 
-export ANDROID_HOME="/Users/hem/Library/Android/sdk"
-export ANDROID_NDK_HOME="/Users/hem/Library/Android/sdk/ndk-bundle"
-
+# ruby
 eval "$(rbenv init -)"
 
+# adding gitlab key
 ssh-add ~/.ssh/gitlab > /dev/null 2>&1
 
 # nvm

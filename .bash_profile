@@ -4,6 +4,7 @@ source /Users/hem/.mac_colors
 source /Users/hem/.profile
 source ~/.kubectl_completion
 
+# show git branch in the bash promp, e.g. "~/Projects/some-project(master) $"
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
