@@ -78,7 +78,7 @@ function backup() {
 function password() {
   chars='@#$%&_+='
   { </dev/urandom LC_ALL=C grep -ao '[A-Za-z0-9]' \
-          | head -n$((RANDOM % 8 + 10))
+          | head -n$((RANDOM % 8 + 6))
       echo ${chars:$((RANDOM % ${#chars})):1}   # Random special char.
   } \
       | sort -r \
