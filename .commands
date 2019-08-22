@@ -128,5 +128,19 @@ function natvpn() {
 }
 
 function flushdns() {
-  sudo killall -HUP mDNSResponder
+  sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache
+}
+
+function gifify() {
+  docker run -it --rm -v $(pwd):/data maxogden/gifify $@
+}
+
+function delete-calendar-cache() {
+  rm -rf ~/Library/Calendar/Calender\ Cache*
+  killall Calendar
+  ps -ef | grep Calendar | head -1 | cut -d ' ' -f 5 | xargs kill -9
+}
+
+function kube-exec() {
+  kubectl exec -it $1 -- sh
 }

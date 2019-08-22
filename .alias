@@ -1,25 +1,46 @@
+# ls
 alias ll='ls -l'
 alias lf='ls -f'
 alias la='ls -la'
 alias sl='ls'
+
 alias vi='vim'
 alias rt='rake -T'
+
+# Apps/Applications
 alias chrome='open -a Google\ Chrome'
 alias firefox='open -a Firefox'
 alias intellij='open -a IntelliJ\ IDEA\ 12'
 alias idea='intellij'
+
+# Git
 alias gc='git commit'
 alias gs='git status'
+
+# Backups
 alias push-dotfiles='cd ~/Projects/dotfiles; git commit -am "Updated dotfiles"; git push; cd -'
 alias pull-all-projects='find ~/Projects -type d -name .git | xargs -n 1 dirname | sort | while read line; do echo $line && cd $line && git pull --rebase; done'
 alias fetch-projects='find ~/Projects -type d -name .git | xargs -n 1 dirname | sort | while read line; do echo $line && cd $line && git fetch; done'
+
+# Commands
 alias mocha='mocha -R nyan'
-alias meat='~/Projects/skymeat/meat.sh'
-alias sea='~/Projects/skymeat/sea.sh'
 alias composer='php composer.phar'
 alias curl='curl -L'
-alias tunnel='ssh mediaserver.remote -L 9091:localhost:9091'
 alias gh-md-toc='~/Projects/github-markdown-toc/gh-md-toc'
+alias toc='~/Projects/github-markdown-toc/gh-md-toc'
+alias composer='/usr/local/bin/composer'
+alias urldecode='python -c "import sys, urllib as ul; \
+    print ul.unquote_plus(sys.argv[1])"'
+alias urlencode='python -c "import sys, urllib as ul; \
+    print ul.quote_plus(sys.argv[1])"'
+alias package-scripts='cat package.json | jq .scripts'
+
+# http
 alias server='http'
 alias serve='http'
 alias static='http'
+alias tunnel='ssh mediaserver.remote -L 9091:localhost:9091'
+
+# Kubernetes
+alias kc='kubectx'
+alias kube='kubectl'
