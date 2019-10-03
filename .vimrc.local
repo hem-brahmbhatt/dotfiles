@@ -13,7 +13,7 @@ set nospell
 colorscheme molokai
 
 " JSX settings
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
 
 " Reveal file in tree
 nmap ,n :NERDTreeFind<CR>
@@ -44,6 +44,7 @@ let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": ["vue", "javascript", "html", "ruby", "java", "jsx", "typescript"],
     \ "passive_filetypes": [] }
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 " Airline settings
 set laststatus=2
@@ -53,3 +54,15 @@ let g:airline_right_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_left_alt_sep= ''
 let g:airline_left_sep = ''
+
+" Typescript options
+" See https://github.com/Quramy/tsuquyomi/blob/master/doc/tsuquyomi.txt#L245
+let g:tsuquyomi_definition_split = 2 
+let g:tsuquyomi_single_quote_import = 1
+let g:tsuquyomi_completion_detail = 1
+let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_ignore_missing_modules = 1
+autocmd FileType typescript setlocal omnifunc=tsuquyomi#complete
+autocmd FileType typescript nmap <buffer> <Leader>t :
+    \ <C-u>echo tsuquyomi#hint()<CR>
+"autocmd FileType typescript setlocal completeopt+=preview

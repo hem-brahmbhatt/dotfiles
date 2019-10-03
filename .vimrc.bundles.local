@@ -1,10 +1,13 @@
 UnBundle 'pangloss/vim-javascript'
-UnBundle 'Shougo/neocomplete.vim.git'
 Bundle 'tomasr/molokai'
 Bundle 'mxw/vim-jsx'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-rhubarb.git'
 Bundle 'brooth/far.vim'
 Bundle 'posva/vim-vue'
-Bundle 'leafgarland/typescript-vim'
 Bundle 'hashivim/vim-terraform'
+
+" Typescript support
+UnBundle 'mhartington/nvim-typescript'
+Bundle 'leafgarland/typescript-vim'
+Bundle 'Quramy/tsuquyomi'
