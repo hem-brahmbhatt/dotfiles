@@ -32,7 +32,7 @@ function vpn() {
     # networksetup -connectpppoeservice $vpn_name
 
     # OpenVPN
-    osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"$region\"" -e "end tell" > /dev/null
+    osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"HemTech $region\"" -e "end tell" > /dev/null
 
     echo "VPN started"
 
@@ -42,7 +42,7 @@ function vpn() {
     # scutil --nc stop $vpn_name
 
     # OpenVPN
-    osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "disconnect \"$region\"" -e "end tell" > /dev/null
+    osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "disconnect \"HemTech $region\"" -e "end tell" > /dev/null
 
     aws ec2 ${command}-instances \
     --instance-ids $id \
@@ -78,7 +78,7 @@ function backup() {
 function password() {
   chars='@#$%&_+='
   { </dev/urandom LC_ALL=C grep -ao '[A-Za-z0-9]' \
-          | head -n$((RANDOM % 8 + 6))
+          | head -n$((RANDOM % 8 + 7))
       echo ${chars:$((RANDOM % ${#chars})):1}   # Random special char.
   } \
       | sort -r \
@@ -143,4 +143,55 @@ function delete-calendar-cache() {
 
 function kube-exec() {
   kubectl exec -it $1 -- sh
+}
+
+function kube-tunnel() {
+  POD="$1"
+  HOST="$2"
+  DESTPORT="$3"
+  if [ -z "$POD" -o -z "$DESTPORT" -o -z "$HOST" ]; then
+    echo "Usage: kube-tunnel [pod name] [destination host] [destination port]"
+      return 1
+      fi
+      pkill -f 'tcpserver 127.0.0.1 6666'
+      tcpserver 127.0.0.1 6666 kubectl exec -i "$POD" nc "$HOST" "$DESTPORT"&
+      echo "Connect to 127.0.0.1:6666 to access $POD $HOST:$DESTPORT"
+}
+
+function lpass-save() {
+  FILE=$1
+  cat $FILE | lpass add --non-interactive --notes $FILE && lpass mv $FILE Files
+}
+
+function diff-curl-json() {
+  vimdiff \
+    <(curl $1 | jq -S) \
+    <(curl $2 | jq -S)
+}
+
+function git-search-replace() {
+  git grep -l $1
+  git grep -l $1 \
+  | xargs sed -i -e "s/$1/$2/g"
+}
+
+function search-replace() {
+  grep -R -l $1
+  grep -R -l $1 \
+  | xargs sed -i -e "s/$1/$2/g"
+}
+
+function git-clone-multiple() {
+  while IFS= read -r line
+  do
+    echo "cloning $line"
+    git clone $line
+  done < <(cat $1)
+}
+
+function diff-github() {
+  COMPARE=$1
+  BASE=$2
+  REPO=`git config --get remote.origin.url | sed 's/^.*://g' | sed 's/\.git//g'`
+  open https://github.com/$REPO/compare/$BASE..$COMPARE
 }

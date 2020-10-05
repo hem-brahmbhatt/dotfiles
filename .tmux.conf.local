@@ -272,3 +272,9 @@ set -g @tpm_plugins :'          \
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
+
+# Slow down scrolling
+bind-key    -T copy-mode    WheelUpPane       select-pane \; send-keys -X -N 1 scroll-up
+bind-key    -T copy-mode    WheelDownPane     select-pane \; send-keys -X -N 1 scroll-down
+bind-key    -T copy-mode-vi WheelUpPane       select-pane \; send-keys -X -N 1 scroll-up
+bind-key    -T copy-mode-vi WheelDownPane     select-pane \; send-keys -X -N 1 scroll-down

@@ -6,6 +6,8 @@ Bundle 'tpope/vim-rhubarb.git'
 Bundle 'brooth/far.vim'
 Bundle 'posva/vim-vue'
 Bundle 'hashivim/vim-terraform'
+Bundle 'iamcco/markdown-preview.nvim'
+Bundle 'neovimhaskell/haskell-vim'
 
 " Typescript support
 UnBundle 'mhartington/nvim-typescript'
