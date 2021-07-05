@@ -50,3 +50,6 @@ alias kube='kubectl'
 
 # Android
 alias nexus='/Users/hem/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_29_x86'
+
+# Disk utility
+alias dff='duf'
