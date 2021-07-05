@@ -11,24 +11,20 @@ source /Users/hem/.auth
 # source /Users/hem/Projects/NewsUK/Wireless/.profile
 source /Users/hem/Projects/CloudMargin/.profile
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # AWS
 complete -C aws_completer aws
-source $(which assume-role)
-
-export PATH="/usr/local/opt/gnu-getopt/bin:/usr/local/bin:$PATH"
-
-# rust - cargo
-export PATH="/Users/hem/.cargo/bin:$PATH"
-
-# ruby
-eval "$(rbenv init -)"
+# source $(which assume-role)
 
 # adding gitlab key
 ssh-add ~/.ssh/gitlab > /dev/null 2>&1
-
-# nvm
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh"  ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # https://github.com/tmux/tmux/issues/475
 export EVENT_NOKQUEUE=1
