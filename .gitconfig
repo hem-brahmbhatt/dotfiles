@@ -4,7 +4,7 @@
 	initials = hb
 [core]
 	excludesfile = /Users/hem/.global_ignore
-	editor = /usr/local/bin/vim
+	editor = nvim
 	ignorecase = false
 [push]
 	default = simple

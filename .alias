@@ -4,7 +4,8 @@ alias lf='ls -f'
 alias la='ls -la'
 alias sl='ls'
 
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias rt='rake -T'
 
 # Apps/Applications
