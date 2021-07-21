@@ -15,3 +15,5 @@ export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 alias luamake=/Users/hem/Projects/lua-language-server/3rd/luamake/luamake
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

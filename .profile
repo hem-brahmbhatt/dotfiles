@@ -9,7 +9,8 @@ source /Users/hem/.auth
 # source /Users/hem/Projects/elife/.profile
 # source /Users/hem/Projects/Nexmo/.profile
 # source /Users/hem/Projects/NewsUK/Wireless/.profile
-source /Users/hem/Projects/CloudMargin/.profile
+# source /Users/hem/Projects/CloudMargin/.profile
+source /Users/hem/Projects/Zego/.profile
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -39,3 +40,7 @@ source ~/.git-completion.bash
 export HISTTIMEFORMAT="%h %d %H:%M:%S "
 export HISTSIZE=50000
 export HISTFILESIZE=50000
+
+# fzf preferences
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+

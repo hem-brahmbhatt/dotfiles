@@ -73,6 +73,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hem/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+  },
   ["nlua.nvim"] = {
     loaded = true,
     path = "/Users/hem/.local/share/nvim/site/pack/packer/start/nlua.nvim"
@@ -80,6 +84,14 @@ _G.packer_plugins = {
   ["nvim-compe"] = {
     loaded = true,
     path = "/Users/hem/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
+  ["nvim-fzf"] = {
+    loaded = true,
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/nvim-fzf"
+  },
+  ["nvim-fzf-commands"] = {
+    loaded = true,
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/nvim-fzf-commands"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

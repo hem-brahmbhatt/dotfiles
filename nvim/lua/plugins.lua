@@ -40,4 +40,15 @@ return require('packer').startup(function(use)
 
   -- Airline
   use { 'vim-airline/vim-airline' }
+
+  -- :MarkdownPreview, had to run npm install manually after cd-ing into plugin
+  use { 'iamcco/markdown-preview.nvim' }
+
+  -- Search and replace
+  use { 'junegunn/fzf' , dir = '~/.fzf', run = './install --all' }
+  use { 'junegunn/fzf.vim' }
+
+  -- Search and replace via lua
+  use { 'vijaymarupudi/nvim-fzf' }
+  use { 'vijaymarupudi/nvim-fzf-commands' }
 end)
