@@ -73,6 +73,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hem/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
+  fzf = {
+    loaded = true,
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/fzf"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/fzf.vim"
+  },
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/Users/hem/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
@@ -125,6 +133,10 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/hem/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-rhubarb"] = {
+    loaded = true,
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/vim-rhubarb"
   },
   ["vim-surround"] = {
     loaded = true,

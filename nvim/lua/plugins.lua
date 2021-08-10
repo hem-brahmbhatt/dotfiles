@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
 
   -- Fugitive for Git
   use { 'tpope/vim-fugitive' }
+  use { 'tpope/vim-rhubarb' }
 
   -- Vim vinegar for file navigation
   use { 'tpope/vim-vinegar' }
@@ -51,4 +52,8 @@ return require('packer').startup(function(use)
   -- Search and replace via lua
   use { 'vijaymarupudi/nvim-fzf' }
   use { 'vijaymarupudi/nvim-fzf-commands' }
+
+  -- Commenter
+  use { 'b3nj5m1n/kommentary' }
+
 end)
