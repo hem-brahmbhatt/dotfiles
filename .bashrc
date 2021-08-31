@@ -13,3 +13,5 @@ export NVM_DIR="$HOME/.nvm"
 alias luamake=/Users/hem/Projects/lua-language-server/3rd/luamake/luamake
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+. /opt/homebrew/etc/profile.d/z.sh

@@ -58,3 +58,8 @@ vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 EOF
+
+command LspDefinition :lua vim.lsp.buf.definition()<cr>
+command LspHover :lua vim.lsp.buf.hover()<cr>
+command LspImplementations :lua vim.lsp.buf.implementation()<cr>
+nnoremap <C-]> <cmd>LspDefinition<cr>

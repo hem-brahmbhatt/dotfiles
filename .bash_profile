@@ -17,3 +17,5 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 alias luamake=/Users/hem/Projects/lua-language-server/3rd/luamake/luamake
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+. /opt/homebrew/etc/profile.d/z.sh
