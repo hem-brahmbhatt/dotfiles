@@ -11,7 +11,7 @@ source /Users/hem/.auth
 # source /Users/hem/Projects/NewsUK/Wireless/.profile
 # source /Users/hem/Projects/CloudMargin/.profile
 # source /Users/hem/Projects/Zego/.profile
-source /Users/hem.brahmbhatt/Projects/Uphold/.profile
+# source /Users/hem.brahmbhatt/Projects/Uphold/.profile
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
