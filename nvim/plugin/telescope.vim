@@ -1,6 +1,7 @@
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff :lua require('telescope.builtin').find_files({hidden = true})<cr>
 nnoremap <C-p> :lua require('telescope.builtin').find_files({hidden = true})<cr>
+nnoremap <C-f> :lua require('telescope.builtin').oldfiles({hidden = true})<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
