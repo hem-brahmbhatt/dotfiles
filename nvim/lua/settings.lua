@@ -5,6 +5,7 @@ local indent = 2
 
 cmd 'syntax enable'
 cmd 'filetype plugin indent on'
+cmd 'set number'  -- show line numbers
 
 utils.opt('b', 'shiftwidth', indent)                -- Use indents of 4 spaces
 utils.opt('b', 'expandtab', true)                   -- Tabs are spaces, not tabs
@@ -14,4 +15,3 @@ utils.opt('w', 'spell', false)
 utils.opt('w', 'wrap', true)			    -- enable wrapping
 utils.opt('w', 'list', false)			    -- don't render special chars (tabs, trails, ...)
 utils.opt('o', 'mouse', 'a')
-

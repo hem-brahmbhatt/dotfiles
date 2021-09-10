@@ -53,3 +53,9 @@ alias nexus='/Users/hem/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_
 
 # Disk utility
 alias dff='duf'
+
+# Homebrew aliases
+alias git='$(brew --prefix)/bin/git'
+alias pip3='$(brew --prefix)/bin/python3 -m pip'
+alias pip='$(brew --prefix)/bin/python3 -m pip'
+alias gita='python3 -m gita'

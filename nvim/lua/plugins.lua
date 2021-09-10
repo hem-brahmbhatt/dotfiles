@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   -- Fugitive for Git
   use { 'tpope/vim-fugitive' }
   use { 'tpope/vim-rhubarb' }
+  use { 'airblade/vim-gitgutter' }
 
   -- Vim vinegar for file navigation
   use { 'tpope/vim-vinegar' }
