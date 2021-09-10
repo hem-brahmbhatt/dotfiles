@@ -1,6 +1,6 @@
-source /Users/hem/.alias
-source /Users/hem/.commands
-source /Users/hem/.auth
+source /Users/hem.brahmbhatt/.alias
+source /Users/hem.brahmbhatt/.commands
+# source /Users/hem.brahmbhatt/.auth
 
 ### Client specific dotfiles, so we're not polluting OS dotfiles.
 
@@ -15,6 +15,7 @@ source /Users/hem/.auth
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/opt/homebrew/bin:$PATH"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
