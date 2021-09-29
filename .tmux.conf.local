@@ -285,3 +285,9 @@ set-option -g default-shell /bin/bash
 
 # Set mouse mode
 set -g mouse on
+
+# Go back to previous window
+bind-key b last-window
+
+# Reload tmux config
+bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
