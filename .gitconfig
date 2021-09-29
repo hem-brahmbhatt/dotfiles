@@ -26,3 +26,5 @@
   prune = git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d
 [pull]
 	rebase = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
