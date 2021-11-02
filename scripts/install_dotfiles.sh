@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-dotfiles=".alias .bash_profile .bashrc .commands .git-completion.bash .gitconfig .mac_colors .profile .sensible.tmux .tmux.conf .tmux.conf.local"
+dotfiles=".alias .bash_profile .bashrc .commands .git-completion.bash .gitconfig .mac_colors .profile .sensible.tmux .tmux.conf.local"
 config="nvim kitty"
 
 continuePrompt() {
@@ -24,7 +24,12 @@ installConfig() {
   done
 }
 
+installDotTmuxConfig() {
+  (cd ~ && ln -s ~/Projects/dotfiles/repos/.tmux/.tmux.conf)
+}
+
 echo "Installing dotfiles..."
 installDotfiles
 installConfig
+installDotTmuxConfig
 echo "Done!"
