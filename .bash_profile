@@ -11,7 +11,8 @@ parse_git_branch() {
 # bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh"  ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
-export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PROMPT_DIRTRIM=2
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 alias luamake=/Users/hem.brahmbhatt/Projects/lua-language-server/3rd/luamake/luamake

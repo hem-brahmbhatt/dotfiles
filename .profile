@@ -46,3 +46,5 @@ export HISTFILESIZE=50000
 # fzf preferences
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
+# fix jq color of null on dark background
+export JQ_COLORS='0;31:0;39:0;39:0;39:0;32:1;39:1;39'
