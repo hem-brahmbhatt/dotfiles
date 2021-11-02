@@ -1,9 +1,3 @@
--- Map leader to comma
-vim.g.mapleader = ','
-
--- nvim-compe
-vim.o.completeopt = "menuone,noselect"
-
 local fn = vim.fn
 local execute = vim.api.nvim_command
 

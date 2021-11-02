@@ -1,3 +1,13 @@
+-- Map leader to comma
+vim.g.mapleader = ','
+
+-- Save undos to disk
+vim.api.nvim_buf_set_option(0, 'undofile', true)
+-- vim.bo.undofile = true
+
+-- nvim-compe
+vim.o.completeopt = "menuone,noselect"
+
 local utils = require('utils')
 
 local cmd = vim.cmd
