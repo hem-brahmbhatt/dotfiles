@@ -16,6 +16,7 @@ local indent = 2
 cmd 'syntax enable'
 cmd 'filetype plugin indent on'
 cmd 'set number'  -- show line numbers
+cmd 'set nomodeline'
 
 utils.opt('b', 'shiftwidth', indent)                -- Use indents of 4 spaces
 utils.opt('b', 'expandtab', true)                   -- Tabs are spaces, not tabs
