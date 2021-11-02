@@ -13,8 +13,8 @@ cloneContinue() {
 
 clone() {
   mkdir -p ~/Projects/dotfiles/repos
-  for r in ${repos}; do
-    (cd ~/Projects/dotfiles/repos && git clone "git@github.com:${r}.git" || cloneContinue "${r}")
+  for repo in ${repos}; do
+    (cd ~/Projects/dotfiles/repos && git clone "git@github.com:${repo}.git" || cloneContinue "${repo}")
   done
 }
 
