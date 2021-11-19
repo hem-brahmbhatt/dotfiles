@@ -4,9 +4,10 @@ alias lf='ls -f'
 alias la='ls -la'
 alias sl='ls'
 
+# Vim
 alias vi='nvim'
 alias vim='nvim'
-alias rt='rake -T'
+alias vimdiff='nvim -d'
 
 # Apps/Applications
 alias chrome='open -a Google\ Chrome'
