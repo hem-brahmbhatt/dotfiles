@@ -1,7 +1,7 @@
 # USE THIS FOR GUI CONFIGURATION
 
-source /Users/hem.brahmbhatt/.mac_colors
-source /Users/hem.brahmbhatt/.profile
+source /Users/hem/.mac_colors
+source /Users/hem/.profile
 
 # show git branch in the bash promp, e.g. "~/Projects/some-project(master) $"
 parse_git_branch() {
@@ -15,7 +15,7 @@ export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 export PROMPT_DIRTRIM=2
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-alias luamake=/Users/hem.brahmbhatt/Projects/lua-language-server/3rd/luamake/luamake
+alias luamake=/Users/hem/Projects/dotfiles/repos/lua-language-server/3rd/luamake/luamake
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

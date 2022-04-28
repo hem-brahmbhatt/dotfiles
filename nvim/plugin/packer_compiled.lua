@@ -7,7 +7,7 @@ end
 
 vim.api.nvim_command('packadd packer.nvim')
 
-local no_errors, error_msg = pcall(function()
+local no_errors = pcall(function()
 
   local time
   local profile_info
@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/hem.brahmbhatt/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/hem.brahmbhatt/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/hem.brahmbhatt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/hem.brahmbhatt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/hem.brahmbhatt/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/hem/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/hem/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/hem/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/hem/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/hem/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,88 +71,88 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["completion-nvim"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
   fzf = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/fzf"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/fzf"
   },
   ["fzf.vim"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/fzf.vim"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/fzf.vim"
   },
   kommentary = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/kommentary"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/kommentary"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
   },
   ["nlua.nvim"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/nlua.nvim"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-fzf"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/nvim-fzf"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/nvim-fzf"
   },
   ["nvim-fzf-commands"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/nvim-fzf-commands"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/nvim-fzf-commands"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-airline"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/vim-airline"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/vim-airline"
   },
   ["vim-code-dark"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/vim-code-dark"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/vim-code-dark"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-gitgutter"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/vim-gitgutter"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/vim-gitgutter"
   },
   ["vim-rhubarb"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/vim-rhubarb"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/vim-rhubarb"
   },
   ["vim-surround"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/vim-surround"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
   ["vim-vinegar"] = {
     loaded = true,
-    path = "/Users/hem.brahmbhatt/.local/share/nvim/site/pack/packer/start/vim-vinegar"
+    path = "/Users/hem/.local/share/nvim/site/pack/packer/start/vim-vinegar"
   }
 }
 
@@ -162,5 +162,5 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
-  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
+  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: ".v:exception | echom "Please check your config for correctness" | echohl None')
 end
