@@ -1,6 +1,8 @@
 local sidebar = require("sidebar-nvim")
 
-sidebar.setup()
+sidebar.setup({
+  sections = { "git", "diagnostics", "buffers", "todos" },
+})
 
 vim.keymap.set("n", "<C-s>", function()
   sidebar.toggle()

@@ -15,6 +15,7 @@ require('colorscheme')     -- Colours
 require('icons')
 require('completion')    -- autocomplete and hints
 require('sidebar')          -- Sidebar
+require('session')          -- Session Management
 
 require('telescopesetup')        -- file searcher
 require('treesittersetup')        -- file searcher

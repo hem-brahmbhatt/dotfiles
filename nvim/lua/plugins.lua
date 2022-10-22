@@ -58,6 +58,9 @@ return require('packer').startup(function(use)
   use { 'hrsh7th/cmp-vsnip' }
   use { 'hrsh7th/vim-vsnip' }
 
+  -- Session management
+  use { 'rmagatti/auto-session', }
+
   -- Icons, font files need to be installed from dotfiles
   use { 'onsails/lspkind.nvim' }
   use { 'nvim-tree/nvim-web-devicons' }
