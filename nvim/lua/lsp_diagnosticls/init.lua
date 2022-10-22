@@ -1,4 +1,7 @@
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 require'lspconfig'.diagnosticls.setup{
+  capabilities = capabilities,
   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'json' },
   init_options = {
     linters = {

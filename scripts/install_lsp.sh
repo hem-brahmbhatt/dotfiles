@@ -14,6 +14,11 @@ NPM_PACKAGES=(
   "prettier"
 )
 
+PIP_PACKAGES=(
+  "python-lsp-server"
+)
+
 echo "installing packages..."
 npm install --global ${NPM_PACKAGES[@]}
+pip install ${PIP_PACKAGES[@]}
 echo "🎉 installation completed."

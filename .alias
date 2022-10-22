@@ -8,6 +8,7 @@ alias sl='ls'
 alias vi='nvim'
 alias vim='nvim'
 alias vimdiff='nvim -d'
+alias vim-cd-plugins='cd ~/.local/share/nvim/site/pack/packer/start'
 
 # Apps/Applications
 alias chrome='open -a Google\ Chrome'
@@ -52,7 +53,7 @@ alias kc='kubectx'
 alias kube='kubectl'
 
 # Android
-alias nexus='/Users/hem/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_29_x86'
+alias nexus='/Users/$USER/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_29_x86'
 
 # Disk utility
 alias dff='duf'
