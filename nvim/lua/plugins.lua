@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
 
   -- Color scheme
   -- use { 'sainnhe/gruvbox-material' }
-  use { '/Users/hbrahmbhatt/Projects/vim-code-dark' }
+  use { 'hem-brahmbhatt/vim-code-dark' }
 
   -- Fuzzy finder
   use {
@@ -26,17 +26,18 @@ return require('packer').startup(function(use)
 
   -- Language Server Protocol
   use { 'neovim/nvim-lspconfig' }
-
-  -- use { 'folke/lsp-colors.nvim' }
-
   use { 'nvim-treesitter/nvim-treesitter' }
+  use {
+      'jose-elias-alvarez/null-ls.nvim',
+      requires = { "nvim-lua/plenary.nvim" }
+  }
+  -- use { 'folke/lsp-colors.nvim' }
 
   -- Completion
   use { 'nvim-lua/completion-nvim' }
 
   -- Lua development
-  use { '/Users/hbrahmbhatt/Projects/nlua.nvim' }
-
+  use { 'hem-brahmbhatt/nlua.nvim' }
 
   -- Vim dispatch
   -- use { 'tpope/vim-dispatch' } -- need to try this out!
@@ -74,8 +75,9 @@ return require('packer').startup(function(use)
   -- Airline
   use { 'vim-airline/vim-airline' }
 
-  -- :MarkdownPreview, had to run npm install manually after cd-ing into plugin
-  use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end }
+
+  -- Markdown preview, unfortunately installs renderer at runtime, see https://github.com/ellisonleao/glow.nvim/blob/main/lua/glow/init.lua#L272-L293
+  use { 'ellisonleao/glow.nvim' }
 
   -- Search and replace
   use { 'junegunn/fzf' , dir = '~/.fzf', run = './install --all' }
@@ -93,7 +95,7 @@ return require('packer').startup(function(use)
   use { 'tpope/vim-eunuch' }
 
   -- Multiple cursors
-  -- use { 'mg979/vim-visual-multi' }
+  use { 'mg979/vim-visual-multi' }
 
   if packer_bootstrap then
     require('packer').sync()

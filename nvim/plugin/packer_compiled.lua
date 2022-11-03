@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["auto-session"] = {
+    loaded = true,
+    path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/auto-session",
+    url = "https://github.com/rmagatti/auto-session"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -94,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
   ["completion-nvim"] = {
     loaded = true,
     path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/completion-nvim",
@@ -109,15 +119,15 @@ _G.packer_plugins = {
     path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
-  },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
-    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   nerdcommenter = {
     loaded = true,
@@ -154,6 +164,11 @@ _G.packer_plugins = {
     path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -169,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["sidebar.nvim"] = {
+    loaded = true,
+    path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/sidebar.nvim",
+    url = "https://github.com/sidebar-nvim/sidebar.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -214,6 +234,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/vim-vinegar",
     url = "https://github.com/tpope/vim-vinegar"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/Users/hbrahmbhatt/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
 
