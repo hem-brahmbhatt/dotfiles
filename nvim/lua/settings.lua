@@ -1,23 +1,30 @@
 -- Map leader to comma
 vim.g.mapleader = ','
 
--- Save undos to disk
--- vim.api.nvim_buf_set_option(0, 'undofile', true)
--- vim.bo.undofile = true
-
 -- nvim-compe
-vim.o.completeopt = "menuone,noselect"
+vim.opt.completeopt = "menu,menuone,noselect,preview"
 
 local utils = require('utils')
 
-local cmd = vim.cmd
 local indent = 4
 
-cmd 'syntax enable'
-cmd 'filetype plugin indent on'
-cmd 'set number'  -- show line numbers
-cmd 'set nomodeline'
-cmd 'set undofile'  -- Save undos to disk
+vim.cmd 'syntax enable'
+vim.cmd 'filetype plugin indent on'
+vim.opt.modeline = false
+vim.opt.undofile = true -- save undos to disk
+vim.opt.number = true -- show line numbers
+vim.opt.updatetime = 1000 -- shows hover dialogs quicker than the default 4 seconds
+vim.opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
+
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+    pattern = "*rplus*.json",
+    callback = function() vim.bo.filetype = "jsonc" end
+})
+
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+    pattern = "*.bml",
+    callback = function() vim.bo.filetype = "xml" end
+})
 
 utils.opt('b', 'shiftwidth', indent)                -- Use indents of 4 spaces
 utils.opt('b', 'expandtab', true)                   -- Tabs are spaces, not tabs

@@ -20,7 +20,7 @@ require('icons')
 require('completion')       -- autocomplete and hints
 require('sidebar')          -- Sidebar
 require('session')          -- Session Management
-require('glowsetup')             -- Markdown preview
+require('glowsetup')        -- Markdown preview
 
 require('telescopesetup')        -- file searcher
 require('treesittersetup')       -- file searcher
@@ -38,3 +38,5 @@ end
 for k,v in pairs(vimFiles) do
   sourceVim(v)
 end
+
+Dump = require('utils').dump

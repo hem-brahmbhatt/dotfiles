@@ -23,3 +23,11 @@ null_ls.setup({
     },
     on_attach = format_on_save
 })
+
+vim.api.nvim_create_user_command(
+    "ESLintToggle",
+    function()
+        null_ls.toggle({name="eslint"})
+    end,
+    {}
+)

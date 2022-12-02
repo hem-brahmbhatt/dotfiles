@@ -36,6 +36,7 @@ telescope.setup{
     -- vimgrep_arguments only gets used for live_grep. For find_files and oldfiles, specify the arguments inline
     -- See https://github.com/nvim-telescope/telescope.nvim/blob/bd9e8a7eac1b3f921d293866abf7574d49cb610c/doc/telescope.txt#L522-L524
     vimgrep_arguments = vimgrep_arguments,
+    dynamic_preview_title = true,
     path_display = "truncate",
     mappings = {
       i = {
@@ -50,16 +51,32 @@ telescope.setup{
   }
 }
 
-utils.map('n', '<C-g>', '', { callback=telescopeBuiltIns.live_grep })
-utils.map('n', '<C-p>', '', { callback=telescopeBuiltIns.find_files })
-utils.map('n', '<C-f>', '', { callback=function()
-  telescopeBuiltIns.oldfiles({hidden = true})
-end})
+utils.map('n', '<C-g>', '', { callback = telescope.extensions.live_grep_args.live_grep_args })
+utils.map('n', '<C-p>', '', { callback = telescopeBuiltIns.find_files })
+utils.map('n', '<C-f>', '', { callback = function()
+    telescopeBuiltIns.oldfiles({ hidden = true })
+end })
 
 vim.keymap.set("n", "<C-]>", function()
-  telescopeBuiltIns.lsp_definitions({show_line = false, jump_type = "never"})
+    telescopeBuiltIns.lsp_definitions({
+        show_line = false,
+        fname_direction = -1,
+        jump_type = "never"
+    })
 end);
 
 vim.keymap.set("n", "<esc>r", function()
-  telescopeBuiltIns.lsp_references({show_line = false, jump_type = "never"})
+    telescopeBuiltIns.lsp_references({
+        show_line = false,
+        fname_direction = -1,
+        jump_type = "never"
+    })
 end);
+
+vim.keymap.set("n", "<C-k>", function()
+    telescopeBuiltIns.lsp_dynamic_workspace_symbols({
+        fname_direction = -1,
+        symbol_width = 30
+    })
+end);
+
