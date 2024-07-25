@@ -8,7 +8,7 @@ These are expected be run on OSX
 - Install homebrew
 - Install applications and libraries using `./scripts/install_homebrew_bundle.sh`
 - Change default shell to bash using `chsh -s /usr/local/bin/bash`
-- Install LSPs using `./scripts/install_lsp.sh`
+- Install LSPs via nvim using `:Mason`
 
 
 ## Nvim
@@ -144,4 +144,4 @@ zR and zM
 
 #### Available language servers
 https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
-Install using ~/dotfiles/scripts/install_lsp.sh
+Install using :Mason

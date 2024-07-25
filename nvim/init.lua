@@ -14,7 +14,7 @@ require('lsp_python')        -- Language Server - python
 require('lsp_clangd')        -- Language Server - clang
 
 
--- Importing setup files. 
+-- Importing setup files.
 -- IMPORTANT: Make sure setup files are named differently to plugins
 require('colorscheme')     -- Colours
 require('icons')
@@ -33,6 +33,7 @@ require('treesittersetup')       -- file searcher
 require('nvim-lspconfig')        -- LSP settings
 require('fidgetsetup')      -- LSP progress
 require('lsp_signaturesetup') -- Autocomplete helper
+require('masonsetup') -- Language server manager
 
 -- Source .vim files. This is sourced by default, but sourcing them here
 -- enables them to be sourced whenever $MYVIMRC is reloaded

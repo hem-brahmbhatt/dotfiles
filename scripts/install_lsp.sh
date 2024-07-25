@@ -1,5 +1,8 @@
 #! /bin/sh
 
+### THIS FILE IS DEPRECATED!!! ###
+### Use mason.nvim plugin instead!!! ###
+
 NPM_PACKAGES=(
   "diagnostic-languageserver"
   "vim-language-server"

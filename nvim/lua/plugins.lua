@@ -43,6 +43,7 @@ return require('packer').startup(function(use)
     use { 'j-hui/fidget.nvim' }
     -- use { 'folke/lsp-colors.nvim' }
     use { 'ray-x/lsp_signature.nvim' }
+    use { 'williamboman/mason.nvim' }
 
     -- Completion
     use { 'nvim-lua/completion-nvim' }
