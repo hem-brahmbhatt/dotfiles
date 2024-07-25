@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash
 
 installBundles() {
 	printf "Install $1 homebrew applications? (y/N)? "

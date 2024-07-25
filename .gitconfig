@@ -4,7 +4,7 @@
 	initials = hb
 [core]
 	excludesfile = /Users/hem/.global_ignore
-	editor = nvim
+	editor = vim
 	ignorecase = false
 [push]
 	default = simple
@@ -28,3 +28,6 @@
 	rebase = true
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[init]
+	defaultBranch = main
+

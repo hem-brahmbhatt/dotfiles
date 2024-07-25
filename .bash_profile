@@ -19,4 +19,4 @@ alias luamake=/Users/hem/Projects/dotfiles/repos/lua-language-server/3rd/luamake
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-. /opt/homebrew/etc/profile.d/z.sh
+# . /opt/homebrew/etc/profile.d/z.sh

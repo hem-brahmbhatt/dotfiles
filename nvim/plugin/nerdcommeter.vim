@@ -1,0 +1,1 @@
+map gcc <plug>NERDCommenterToggle

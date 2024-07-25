@@ -1,26 +1,20 @@
-source /Users/hem/.alias
-source /Users/hem/.commands
-# source /Users/hem/.auth
+source /Users/$USER/.alias
+source /Users/$USER/.commands
+# source /Users/$USER/.auth
 
 ### Client specific dotfiles, so we're not polluting OS dotfiles.
-
-# source /Users/hem/Projects/NewsUK/TheSun/.profile
-# source /Users/hem/Projects/NewsUK/Times/.profile
-# source /Users/hem/Projects/elife/.profile
-# source /Users/hem/Projects/Nexmo/.profile
-# source /Users/hem/Projects/NewsUK/Wireless/.profile
-# source /Users/hem/Projects/CloudMargin/.profile
-# source /Users/hem/Projects/Zego/.profile
-# source /Users/hem/Projects/Uphold/.profile
+# CURRENT_CLIENT=Bloomberg
+# source /Users/$USER/Projects/$CURRENT_CLIENT/.profile
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH="/opt/homebrew/bin:$PATH"
+BREWPATH=$(brew --prefix)
+eval "$($BREWPATH/bin/brew shellenv)"
+export PATH="$(brew --prefix)/bin:$PATH"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
+  [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # AWS
 complete -C aws_completer aws

@@ -1,3 +1,5 @@
+#!/bin/bash
+#
 function cert() {
   echo | openssl s_client -showcerts -servername $1 -connect $1:443 2>/dev/null | openssl x509 -inform pem -noout -text
 }
@@ -65,7 +67,6 @@ function yaml2json() {
     '$/ = "END"; input = STDIN.gets; puts YAML.load(input).to_json if YAML.parse(input)'
 }
 
-#!/bin/bash
 #Info: https://community.akamai.com/community/web-performance/blog/2015/03/31/using-akamai-pragma-headers-to-investigate-or-troubleshoot-akamai-content-delivery
 function akamai() {
   curl -sILk -H 'Pragma: akamai-x-cache-on, akamai-x-cache-remote-on,akamai-x-check-cacheable, akamai-x-get-cache-key,akamai-x-get-extracted-values, akamai-x-get-nonces,akamai-x-get-ssl-client-session-id,akamai-x-get-true-cache-key, akamai-x-serial-no' $* 2>&1
@@ -194,4 +195,8 @@ function diff-github() {
   BASE=$2
   REPO=`git config --get remote.origin.url | sed 's/^.*://g' | sed 's/\.git//g'`
   open https://github.com/$REPO/compare/$BASE..$COMPARE
+}
+
+function print-function() {
+    declare -f $1
 }

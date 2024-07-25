@@ -247,12 +247,15 @@ set -gu prefix2
 unbind C-a
 unbind C-space
 bind-key -n C-space next-window
+# Go back to previous window (remapped to S-space using terminal keymapping)
+bind-key b previous-window
+
 set -g @resurrect-save-shell-history 'on'
 set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-strategy-vim 'session'
 
 # Speed things up
-set-option -s escape-time 10
+set-option -s escape-time 0
 set -g focus-events on
 
 
@@ -260,7 +263,7 @@ set -g focus-events on
 # run-shell /Users/hem/.sensible.tmux
 
 # List of plugins
-set -g @tpm_plugins :'          \
+set -g @tpm_plugins :'         \
   tmux-plugins/tpm             \
   tmux-plugins/tmux-resurrect  \
   tmux-plugins/tmux-continuum  \
@@ -283,13 +286,22 @@ bind-key    -T copy-mode-vi WheelDownPane     select-pane \; send-keys -X -N 1 s
 # Use bash by default
 ## Disabled in case the path to bash is different, e.g. installing via homebrew on M1 mac, in this case, use chsh -s /opt/homebrew/bin/bash
 # set-option -g default-shell /bin/bash
-set-option -g default-shell /opt/homebrew/bin/bash
+# set-option -g default-shell /opt/homebrew/bin/bash
+set-option -g default-shell /usr/local/bin/bash
 
 # Set mouse mode
 set -g mouse on
 
-# Go back to previous window
-bind-key b last-window
-
 # Reload tmux config
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
+
+# Drag windows on the status bar
+bind-key -n MouseDrag1Status swap-window -d -t=
+
+bind w choose-window -O name
+
+# Unbind mouse mode toggle, it's super easy to mistype and toggle this by accident
+unbind-key -T prefix m
+
+# Search
+bind-key / copy-mode \; send-key ?
