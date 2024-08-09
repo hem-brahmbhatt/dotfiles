@@ -9,6 +9,7 @@ These are expected be run on OSX
 - Install applications and libraries using `./scripts/install_homebrew_bundle.sh`
 - Change default shell to bash using `chsh -s /usr/local/bin/bash`
 - Install LSPs via nvim using `:Mason`
+- Install a font from NerdFont for Neovim to show icons correctly, e.g. RobotoMono
 
 
 ## Nvim
@@ -21,6 +22,7 @@ Save and source the plugins.lua file by running 
 and then 
 ```:PackerInstall ```
 to install them. Plugins are automatically loaded, no need to restart vim :raisehands
+(although if you have to require/setup plugins via lua, you may need to :luafile the init.lua file again)
 
 
 

@@ -2,3 +2,5 @@ passwords
 *auth*
 .yarnrc
 repos
+.DS_Store
+RobotoMono/

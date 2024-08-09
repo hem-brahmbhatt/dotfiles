@@ -30,7 +30,7 @@ alias fetch-projects='find ~/Projects -type d -name .git | xargs -n 1 dirname | 
 # Commands
 alias mocha='mocha -R nyan'
 alias composer='php composer.phar'
-alias curl='curl -L'
+#alias curl='curl -L'
 alias gh-md-toc='~/Projects/github-markdown-toc/gh-md-toc'
 alias toc='~/Projects/github-markdown-toc/gh-md-toc'
 alias composer='/usr/local/bin/composer'
