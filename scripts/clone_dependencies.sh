@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-repos="gpakosz/.tmux sumneko/lua-language-server Microsoft/python-language-server"
+repos="gpakosz/.tmux"
 
 cloneContinue() {
   printf "Continue (Y/n)?"

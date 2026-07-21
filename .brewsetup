@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Load Homebrew env only when we’re interactive and not inside Codex CLI
+if [[ $- == *i* ]] && [[ -z "${CODEX_CLI:-}" ]]; then
+    BREWPATH=/opt/homebrew/
+    eval "$($BREWPATH/bin/brew shellenv)"
+    export PATH="$(brew --prefix)/bin:$PATH"
+fi

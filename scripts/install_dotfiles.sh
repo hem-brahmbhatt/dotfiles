@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-dotfiles=".alias .bash_profile .bashrc .commands .git-completion.bash .gitconfig .mac_colors .profile .sensible.tmux .tmux.conf.local"
+dotfiles=".alias .bash_profile .bashrc .commands .git-completion.bash .gitconfig .mac_colors .profile .sensible.tmux .tmux.conf.local .nvmsetup .brewsetup"
 config="nvim kitty"
 
 continuePrompt() {
